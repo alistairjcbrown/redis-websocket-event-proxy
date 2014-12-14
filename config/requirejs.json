@@ -1,0 +1,21 @@
+{
+    "baseUrl": "./src",
+    "paths": {
+        "config":               "utils/config",
+        "authorize":            "utils/authorize/index",
+
+        "lib/http-server":      "lib/http-server/index",
+        "lib/redis-client":     "lib/redis-client/index",
+        "lib/websocket-server": "lib/websocket-server/index",
+
+        "test-environment":     "tests/test-environment",
+        "squire":               "../node_modules/squirejs/src/Squire"
+
+    },
+    "map": {
+        "*": {
+            "mocks":            "tests/mocks",
+            "fixtures":         "tests/fixtures"
+        }
+    }
+}
