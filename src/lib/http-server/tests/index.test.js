@@ -26,8 +26,8 @@ function(http_mock) {
             });
 
             test("should return created server", function() {
-                var result = env.server.instance();
-                expect(result).to.be.an.instanceOf(http_mock.Server_instance_mock);
+                var created_server = env.server.instance();
+                expect(created_server).to.be.an.instanceOf(http_mock.Server_instance_mock);
             });
 
         });
@@ -36,6 +36,14 @@ function(http_mock) {
 
             test("should exist", function() {
                 expect(env.server.start).to.be.a("function");
+            });
+
+            test("should start the server listening on the correct port", function() {
+                var created_server = env.server.instance();
+                env.server.start();
+
+                expect(created_server.listen).to.have.been.calledOnce;
+                expect(created_server.listen).to.have.been.calledWith(8080);
             });
 
         });

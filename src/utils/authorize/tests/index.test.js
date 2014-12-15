@@ -12,7 +12,7 @@ define([ "authorize" ], function(authorize) {
 
         test("should call callback without error", function() {
             authorize({}, env.spy);
-            expect(env.spy).to.be.calledOnce;
+            expect(env.spy).to.have.been.calledOnce;
         });
 
     });
