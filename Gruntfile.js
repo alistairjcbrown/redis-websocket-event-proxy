@@ -25,55 +25,13 @@ module.exports = function(grunt) {
     // Strict JSHint rules
     jshint = {
         "all": generate_path_matches(".js"),
-        "options": {
-            "curly":      true,
-            "devel":      false,
-            "eqeqeq":     true,
-            "eqnull":     true,
-            "expr":       true,
-            "immed":      true,
-            "indent":     4,
-            "latedef":    true,
-            "maxdepth":   3,
-            "maxlen":     140,
-            "maxparams":  10,
-            "newcap":     true,
-            "noarg":      true,
-            "noempty":    true,
-            "quotmark":   "double",
-            "strict":     true,
-            "trailing":   true,
-            "undef":      true,
-            "unused":     true,
-            "globals": {
-                // Test globals
-                "define":        true,
-                "env":           true,
-                "expect":        true,
-                "injector":      true,
-                "mocha":         true,
-                "module":        true,
-                "require":       true,
-                "setup":         true,
-                "suite":         true,
-                "suiteSetup":    true,
-                "suiteTeardown": true,
-                "teardown":      true,
-                "test":          true,
-
-                // Env globals
-                "process":       true,
-                "console":       true,
-                "global":        true
-
-            }
-        }
+        "options": grunt.file.readJSON("./config/jshint.json")
     };
 
     // Run mocha tests in node
     mocha_nodejs = {
         "test": {
-            "src": "test.runner.js",
+            "src": "src/tests/runner.js",
             "options": {
                 "reporter": "spec",
                 "ui":       "tdd"

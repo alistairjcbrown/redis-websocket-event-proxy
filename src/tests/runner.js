@@ -9,7 +9,7 @@
 
     var grunt = require("grunt"),
         requirejs = require("requirejs"),
-        require_config = require("./config/requirejs.json"),
+        require_config = require("../../config/requirejs.json"),
         test_files = grunt.option("test-files");
 
     // Set require config
