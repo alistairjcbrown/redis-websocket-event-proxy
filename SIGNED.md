@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.14 (GNU/Linux)
 
-iQEcBAABAgAGBQJUjiT7AAoJEJEOHi8Q7zzzkPUH/R+ztkruTqL0sm3urV8mIPAU
-FyFagIUuyr/W48sd5CuzXj77wFuofU5LuMXeM3lM7ISu+U5hhqY0wf4lGcHNT7H/
-GD7s4qkrJArKpYiwj+xYH9WWRkS2OJYYrIpaOC4jBX+Y7yWWN3t76H6XkCiK25tS
-4l91LXfWRXt8oyI8nAw8VV7kmiRdwRDaaExz9NrxaEmox008pCfrrisNFih3ZE5r
-++vyiIyt4zRmYJfCgy+F3MHZrN5sBvveXJ49sjK8Q8RH1I0sBl+ATdPGwzLL3Cfo
-2Z9zaXdGRbaPGGwIncOHhVEOIy3aSszR+UplOjiLT5ldl1H2pn//HtGp/RPFd7s=
-=i4jf
+iQEcBAABAgAGBQJUjjGbAAoJEJEOHi8Q7zzzaUUH/1McsUl1HdWWukLBd1j3mcsB
+lPfTrfFwno+pvXuMR91+QO29DhRWc9R43ipo3qJ1+PDofzql2HjDAyFSn7gcR6wV
+damBeGcIxImJKJU0KbkBh3y6VvJWT0hmqsxiCCtK2duoDtu1zFi+8kDmSVscaWin
+IPfGCQLgo3rdHnXJe3xYPzkdXUAViIP4htIInR+tiVwweEwPtsn+j57GYw9U53eB
+LIiuT9UhHvqssV8o77T4XFfO4i5Yrj29zqWeyqWpoDYpgQu59GOUFs7OzETJ1+XD
+mJkfAV+r1xbhYvrWzntS44DvRnJhUdfNcpr1v8aAVGXJZjoBz7zvuSQszR7hBI4=
+=Nsl4
 -----END PGP SIGNATURE-----
 
 ```
@@ -25,7 +25,7 @@ size  exec  file                       contents
             ./                                                                                         
 27            .gitignore               403de3e1c73edcfaa2f46ff6146f414ddcaeed97717a02af53733b31c2dec963
 113           .travis.yml              d48aa039d84d35164a8b29ecb75ac4787f974c248a4b09d1cb7587bbc1e15924
-2745          Gruntfile.js             ac72e4ee50eb3ace6d16b8c5f18c2c376076bede41e608bac8925a180f0ba123
+2923          Gruntfile.js             b55cdad7a6ffc662cb79c6ffd652dfd284132698997301a93433b1231a7c3a26
 1081          LICENSE.md               0e7bf3c5852cb41c33a213aed24d4321df388f819323e0027c3c91a009429df8
 535           README.md                ad6302337419ce42ca25539acf769c68e0596a05f4f407d170fb96037f806f2e
               config/                                                                                  
@@ -41,7 +41,7 @@ size  exec  file                       contents
 124                 README.md          c11a7898d18d28d2d587fca367abce8ff3fed8d9382f6f85413e1d107daf3a55
 312                 index.js           56dce55946390e6dfa752bf5b4934c49fa0f71a605cb25bcfbf6e3ba4a04d2a1
                     tests/                                                                             
-1451                  index.test.js    7e281dd7dd060c11a626b5e1ee3c62f86121d47f84b7ef50e688e8f38633aeb1
+1506                  index.test.js    8b64c03ba4fefe9eee163dd0fd16802b0da88d0a54c5d05a7f7a0774abc94a2c
                   redis-client/                                                                        
 0                   README.md          e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 83                  index.js           c35a42886251aeb1a0f4224019743505f7345920720cb5e92ac7b844916f1834
@@ -50,13 +50,13 @@ size  exec  file                       contents
 47                  README.md          c5eec1264ef9c60f67212bcc0b9e4d114a0c7d4c6e63426f08f87cc18fd7482a
 651                 index.js           f6a630262e75db6d85191b6833b3b225aea4e3201370e4b7429591097b2c824c
                     tests/                                                                             
-1164                  index.test.js    18cc09ad8a3ae06bcb1cb94a399a1a8a7ece6ee8547bb082148322c88bf05bac
+1377                  index.test.js    d54e310337780eb8b349767536ff99aa1a0f9cb4d6423f8ad06974989689bd61
                 tests/                                                                                 
                   fixtures/                                                                            
                   mocks/                                                                               
-352                 http.js            219f4f9582b60d821fb0cb7d9cc39647cb4d51224f5af2cd7d79d0fc83d49478
-275                 primus.js          4dcd5f5af156571115246f91fcf7b591cde4aea4dd4de288ecb2595e8153fb7d
-465               test-environment.js  ea419d77f597dd4134b9090baf6ce3a2cddada9950fbadfab6c8ed7d2ca43a42
+572                 http.js            20f08495a2b7ce09847a1a6793790c94a502f4f9fa4d5d1a0417ffb0a8284f1b
+356                 primus.js          6350878c1eefc2fd9736ea24768c8026b55eefba3a929d0bced608c3c1e24532
+783               test-environment.js  635ca37453cb282789761bc52a2f4920ed808e9c8e122a566fc87ac81e48a524
                 utils/                                                                                 
                   authorize/                                                                           
 189                 README.md          3e91c063d6e9a7d566c16ac7975434a7f34ccecc5deb0b7c7f10cb0197b0813b

@@ -4,10 +4,16 @@
 define([ "sinon" ], function(sinon) {
     "use strict";
 
+    var sb = sinon.sandbox.create();
+
+    teardown(function() {
+        sb.reset();
+    });
+
     return function() {
-        this.instance  = sinon.spy();
-        this.start     = sinon.spy();
-        this.authorize = sinon.spy();
-        this.on        = sinon.spy();
+        this.instance  = sb.spy();
+        this.start     = sb.spy();
+        this.authorize = sb.spy();
+        this.on        = sb.spy();
     };
 });

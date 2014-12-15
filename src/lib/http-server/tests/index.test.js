@@ -6,44 +6,47 @@ function(http_mock) {
     "use strict";
 
     suite("HTTP Server", function() {
+        var server;
 
-        setup(function(done) {
-            env.injector.mock("http", http_mock);
-            env.injector.require(["lib/http-server"], function(server) {
-                env.server = server;
+        suiteSetup(function(done) {
+            injector.mock("http", http_mock);
+            injector.require(["lib/http-server"], function(http_server) {
+                server = http_server;
                 done();
             });
         });
 
         test("should exist", function() {
-            expect(env.server).to.be.an("object");
+            expect(server).to.be.an("object");
         });
 
         suite("get server instance", function() {
 
             test("should exist", function() {
-                expect(env.server.instance).to.be.a("function");
+                expect(server.instance).to.be.a("function");
             });
 
             test("should return created server", function() {
-                var created_server = env.server.instance();
-                expect(created_server).to.be.an.instanceOf(http_mock.Server_instance_mock);
+                var created_server = server.instance();
+                expect(created_server).to.be.an.instanceOf(http_mock._Server_instance_mock);
             });
 
         });
 
         suite("start server", function() {
+            setup(function() {
+                env.created_server = server.instance();
+            });
 
             test("should exist", function() {
-                expect(env.server.start).to.be.a("function");
+                expect(server.start).to.be.a("function");
             });
 
             test("should start the server listening on the correct port", function() {
-                var created_server = env.server.instance();
-                env.server.start();
+                server.start();
 
-                expect(created_server.listen).to.have.been.calledOnce;
-                expect(created_server.listen).to.have.been.calledWith(8080);
+                expect(env.created_server.listen).to.have.been.calledOnce;
+                expect(env.created_server.listen).to.have.been.calledWith(8080);
             });
 
         });

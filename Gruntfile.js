@@ -47,21 +47,25 @@ module.exports = function(grunt) {
             "unused":     true,
             "globals": {
                 // Test globals
-                "define":    true,
-                "module":    true,
-                "require":   true,
-                "mocha":     true,
-                "expect":    true,
-                "suite":     true,
-                "test":      true,
-                "setup":     true,
-                "teardown":  true,
+                "define":        true,
+                "env":           true,
+                "expect":        true,
+                "injector":      true,
+                "mocha":         true,
+                "module":        true,
+                "require":       true,
+                "setup":         true,
+                "suite":         true,
+                "suiteSetup":    true,
+                "suiteTeardown": true,
+                "teardown":      true,
+                "test":          true,
 
                 // Env globals
-                "process": true,
-                "console": true,
-                "global":  true,
-                "env":     true
+                "process":       true,
+                "console":       true,
+                "global":        true
+
             }
         }
     };
