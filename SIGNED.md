@@ -1,16 +1,15 @@
 ##### Signed by https://keybase.io/alistairjcbrown
 ```
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
-Comment: GPGTools - https://gpgtools.org
+Version: GnuPG v1.4.14 (GNU/Linux)
 
-iQEcBAABCgAGBQJUjvJeAAoJEJEOHi8Q7zzzesQH/13mx3iBqDpYHWiAJltjsgbJ
-s73i3T9IRQK7HzjVxcwS2U1IhflMXE4tWJ9JZ3p/nwiiRSa3ZEOGPgAgHquKmxPM
-HRnGTjd1apzOO63v/MQVEjLiYcItO9aheee6GEepUF1Y6++MLxsd+D8IXr3GlgDm
-ROQgd7lzHRjQLyezMe9B8cwXqUxP3FWDc8vkK2Ud1WRFTrlrn7X6nnpa33XtU40B
-XsSxo8O/DnMs0Dhr3GW4HL8fjEw+Jb0XR2y3rz6KFgzBcNyNRs6giQDZMPxkwT65
-oEgOGThJRJLjx9LTh9aJTX0zZTcImYvKqk1NA+F6eoYy7lCav5PU6bLoGrHBIJo=
-=0ZO9
+iQEcBAABAgAGBQJUj3e2AAoJEJEOHi8Q7zzzMKoIAL7GaOwUA4FWiXK8d9lv/4IP
+RJejyttCl89+/sLNApq95vE7mYpX4ygmO5oaah+BJ75lS4dJDhIO1sD/rjAYr7tU
+cce7U4iVbHrv9gmN+1BpcB91FaebKlfRk/lSWMy1RA1IwCZE8UfC28jBnE0K2nXk
+0PzMYJpNSF+VUn5NVQLZmQ1CaH/YqZSFLjrp3dCHm2VbLCJ8QGVdR8tK5h8cs35e
++MaQMofgwAmN/WcJqzKxX7e1TpD5URtBZ30auE0OpD0Rsvc/oR3M1sRNkfuHQ1eM
+D/HGrLQB1Xr4R9lG0IP3gLn170BvHyEJA+HsjmhwG46qjD5xYgvKe1CAnWdx6eA=
+=J6Eh
 -----END PGP SIGNATURE-----
 
 ```
@@ -34,7 +33,7 @@ size  exec  file                       contents
 975             jshint.json            17f9d9d39a906cd3beba0c1f35b65d46d6efac1c685316ae5069248b2f91e8b1
 603             requirejs.json         7735e1df9c9d9db6adc93f9b29525b59e26797b0097110c26c4338133aaa2e41
 389           index.js                 0876663173df2507b528bae0ae3743f98804ae8a81eb8c68707800690182d3f1
-1158          package.json             b7089515a3379b4c931a950ab8b8a26f7d61c05667bd75726d88ad2cae6ed861
+1185          package.json             964767c6dbe3b5282094c9cf17e67b02d8c77a6a61f482404021f6b5039b1adc
               src/                                                                                     
 111             README.md              7b1b44318066880ada5881989046116beac4adcf6953141109992573fd66e684
 321             app.js                 0c64162bf6a662e6b19e803be366961d3fa59fd2ed44202c489f8ff691bc0dfe
@@ -46,13 +45,16 @@ size  exec  file                       contents
 1506                  index.test.js    8b64c03ba4fefe9eee163dd0fd16802b0da88d0a54c5d05a7f7a0774abc94a2c
                   redis-client/                                                                        
 0                   README.md          e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-83                  index.js           c35a42886251aeb1a0f4224019743505f7345920720cb5e92ac7b844916f1834
+143                 index.js           480392c37bb3277fe4f8b0d8673946096b7f4174439705f1b56695b7ac372b2f
+                    tests/                                                                             
+519                   index.test.js    e49c0f4904390ab3fa30f94d9913c4dd37b1898abf8e65f18a04dfa433d55563
                   websocket-server/                                                                    
 47                  README.md          c5eec1264ef9c60f67212bcc0b9e4d114a0c7d4c6e63426f08f87cc18fd7482a
 651                 index.js           f6a630262e75db6d85191b6833b3b225aea4e3201370e4b7429591097b2c824c
                     tests/                                                                             
 1377                  index.test.js    d54e310337780eb8b349767536ff99aa1a0f9cb4d6423f8ad06974989689bd61
                 tests/                                                                                 
+                  fixtures/                                                                            
                   mocks/                                                                               
 572                 http.js            20f08495a2b7ce09847a1a6793790c94a502f4f9fa4d5d1a0417ffb0a8284f1b
 356                 primus.js          6350878c1eefc2fd9736ea24768c8026b55eefba3a929d0bced608c3c1e24532

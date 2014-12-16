@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "chai": "^1.9.2",
+    "fakeredis": "^0.2.2",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-keybase-dir": "^0.1.0",
