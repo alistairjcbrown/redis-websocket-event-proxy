@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 
         return base;
     },
-    jshint, mocha_nodejs, keybase_dir;
+    jshint, jscs, mocha_nodejs, keybase_dir;
 
     // ------
 
@@ -26,6 +26,16 @@ module.exports = function(grunt) {
     jshint = {
         "all": generate_path_matches(".js"),
         "options": grunt.file.readJSON("./config/jshint.json")
+    };
+
+    // Strict JS code style rules
+    jscs = {
+        "files": {
+            "src": generate_path_matches(".js")
+        },
+        "options": {
+            "config": "./config/jscs.json"
+        }
     };
 
     // Run mocha tests in node
@@ -47,6 +57,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         "pkg":          grunt.file.readJSON("package.json"),
         "jshint":       jshint,
+        "jscs":         jscs,
         "mochaTest":    mocha_nodejs,
         "keybase_dir":  keybase_dir,
     });
@@ -59,7 +70,8 @@ module.exports = function(grunt) {
 
     // Define tasks
     grunt.registerTask("test",    [ "keybase_dir:verify", "go" ]);
-    grunt.registerTask("go",      [ "jshint", "mochaTest" ]);
+    grunt.registerTask("lint",    [ "jshint", "jscs" ]);
+    grunt.registerTask("go",      [ "lint", "mochaTest" ]);
     grunt.registerTask("build",   [ "go", "keybase_dir:sign" ]);
     grunt.registerTask("default", [ "go" ]);
 

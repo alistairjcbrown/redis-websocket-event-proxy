@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.14 (GNU/Linux)
 
-iQEcBAABAgAGBQJUj3e2AAoJEJEOHi8Q7zzzMKoIAL7GaOwUA4FWiXK8d9lv/4IP
-RJejyttCl89+/sLNApq95vE7mYpX4ygmO5oaah+BJ75lS4dJDhIO1sD/rjAYr7tU
-cce7U4iVbHrv9gmN+1BpcB91FaebKlfRk/lSWMy1RA1IwCZE8UfC28jBnE0K2nXk
-0PzMYJpNSF+VUn5NVQLZmQ1CaH/YqZSFLjrp3dCHm2VbLCJ8QGVdR8tK5h8cs35e
-+MaQMofgwAmN/WcJqzKxX7e1TpD5URtBZ30auE0OpD0Rsvc/oR3M1sRNkfuHQ1eM
-D/HGrLQB1Xr4R9lG0IP3gLn170BvHyEJA+HsjmhwG46qjD5xYgvKe1CAnWdx6eA=
-=J6Eh
+iQEcBAABAgAGBQJUj38QAAoJEJEOHi8Q7zzz5hYIALi8L975D+eaYmo9Y/qWgiTx
+/OkRev21dcsV6kz8IjKsdlLwg7xon6doIQ+qTMa8hRtcgLflvgIjoBbqX14fqoc8
+ogn9PggFl9RyhzZDREcGTcL8boqKs76FCirpTwWVXO+w6u2E5XeL/k2Afi9KFQ8m
+O++lOAk0DYI7JpWnATK4e53z7FchQJ7pOiumgLsFGirahmHMx4g7l9LO1csu6TmN
+VmE1fcg+IXPFsQpz6Ye+CVz/46I8SOwGlYC7rBzv6q6LIaQ4NADzEfIM8zOY6y4W
+mm83UrjVkK7OExKSKUTa3dqiYoZYOny2VreS3EMZOqs7qDlBCQJVPz3MBkTXuLg=
+=MsAE
 -----END PGP SIGNATURE-----
 
 ```
@@ -25,15 +25,16 @@ size  exec  file                       contents
             ./                                                                                         
 27            .gitignore               403de3e1c73edcfaa2f46ff6146f414ddcaeed97717a02af53733b31c2dec963
 113           .travis.yml              d48aa039d84d35164a8b29ecb75ac4787f974c248a4b09d1cb7587bbc1e15924
-1629          Gruntfile.js             9573e6eb252727246dd319849c9bfc250fce23d6d8a1358b4110b5d8de787b91
+1927          Gruntfile.js             5d0f065f72236840bf202e58b9d081560a6622f29777d8f0a77f747d4eac5ae1
 1081          LICENSE.md               0e7bf3c5852cb41c33a213aed24d4321df388f819323e0027c3c91a009429df8
 879           README.md                1e729581923ba05a5b9357abb4cd7623272f217e6fc9dac29c78eb5305219de6
               config/                                                                                  
 106             app.json               aa191f0bb9f670e023dea8708fd14d5a915a73e3913ef4a4231bfb5bedb4ff9c
+386             jscs.json              375a3f95f4b5a001c957a21e9550d244a22b27f81ce44e809567eada96fca805
 975             jshint.json            17f9d9d39a906cd3beba0c1f35b65d46d6efac1c685316ae5069248b2f91e8b1
 603             requirejs.json         7735e1df9c9d9db6adc93f9b29525b59e26797b0097110c26c4338133aaa2e41
 389           index.js                 0876663173df2507b528bae0ae3743f98804ae8a81eb8c68707800690182d3f1
-1185          package.json             964767c6dbe3b5282094c9cf17e67b02d8c77a6a61f482404021f6b5039b1adc
+1213          package.json             4d186f7240946b9fce56fa041630f4b878e2ed4b671f801537c56a9692084bc2
               src/                                                                                     
 111             README.md              7b1b44318066880ada5881989046116beac4adcf6953141109992573fd66e684
 321             app.js                 0c64162bf6a662e6b19e803be366961d3fa59fd2ed44202c489f8ff691bc0dfe
