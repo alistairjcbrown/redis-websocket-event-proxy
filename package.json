@@ -7,7 +7,10 @@
   "contributors": [],
   "dependencies": {
     "engine.io": "^1.4.3",
+    "event-pubsub": "^1.0.3",
     "primus": "^2.4.12",
+    "primus-emit": "^0.1.2",
+    "primus-rooms": "^3.1.0",
     "redis": "^0.12.1",
     "requirejs": "^2.1.15"
   },

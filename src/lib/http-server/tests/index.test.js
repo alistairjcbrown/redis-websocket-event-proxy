@@ -28,7 +28,7 @@ function(http_mock) {
 
             test("should return created server", function() {
                 var created_server = server.instance();
-                expect(created_server).to.be.an.instanceOf(http_mock._Server_instance_mock);
+                expect(created_server).to.be.an.instanceOf(http_mock._Server_mock);
             });
 
         });

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Example Page</title>
+        <script src="http://localhost:8080/primus/primus.js"></script>
+        <style>
+            textarea {
+                width: 100%;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <textarea id="output" readonly></textarea>
+        <script>
+            var output = document.getElementById("output"),
+                echo = document.getElementById("echo");
+
+            var primus = new Primus("http://localhost:8080");
+
+            primus.on("notification", function received(data) {
+                output.value += data +"\n";
+            });
+
+            primus.emit("client-action", "bar");
+        </script>
+    </body>
+</html>
