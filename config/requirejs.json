@@ -4,6 +4,8 @@
         "config":                         "utils/config",
         "authorize":                      "utils/authorize/index",
         "pubsub":                         "utils/pubsub",
+        "utils":                          "utils/utils/index",
+        "check":                          "utils/check",
 
         "lib/http-server":                "lib/http-server/index",
         "lib/redis-client":               "lib/redis-client/index",

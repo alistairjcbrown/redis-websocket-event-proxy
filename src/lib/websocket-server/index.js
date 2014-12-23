@@ -1,8 +1,14 @@
 /**
  *  Websocket Server Controller
  */
-define([ "lib/websocket-server/websocket", "lib/http-server", "pubsub", "config" ],
-function(websocket_server, http_server, pubsub, config) {
+define([
+    "lib/websocket-server/websocket", "lib/http-server",
+    "pubsub", "config", "check", "utils"
+],
+function(
+    websocket_server, http_server,
+    pubsub, config, check, utils
+) {
     "use strict";
 
     var getPayload, setupClientBindings, triggerEventToClients, websocket;
@@ -13,14 +19,11 @@ function(websocket_server, http_server, pubsub, config) {
 
     setupClientBindings = function(client) {
         client.on("incoming::data", function (event_data) {
-            var received_data, event_packet;
+            var received_data = utils.parseJSON(event_data),
+                event_packet;
 
-            try {
-                received_data = JSON.parse(event_data);
-            } catch(e) {}
-
-            if (typeof received_data !== "object" ||
-                typeof received_data.emit !== "object") {
+            if ( ! check(received_data).has("emit") ||
+                check(received_data.emit).is.not("array")) {
                 return;
             }
 

@@ -6,6 +6,7 @@
   "bugs": "https://github.com/alistairjcbrown/redis-websocket-event-proxy/issues",
   "contributors": [],
   "dependencies": {
+    "check-type": "^0.4.11",
     "engine.io": "^1.4.3",
     "event-pubsub": "^1.0.3",
     "primus": "^2.4.12",

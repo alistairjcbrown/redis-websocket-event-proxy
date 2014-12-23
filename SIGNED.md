@@ -4,13 +4,13 @@
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQEcBAABCgAGBQJUmKz6AAoJEJEOHi8Q7zzzeLwH+gOzKQziPuESyyaLzYtZtIKz
-bWIFN0We58XsobAtMsSex11LdhSZCcuMSXVDT96jZTo8DHapRJf92FdtiWbM8iTU
-hzj3AElvlc4qbIPWlcTolBTzx1Y5ytYRsbIyV8+NHlUb8Sny6Fs2hTtYb3uBxUZG
-vXomRExuheSC3mUiLjzajyuEyN6V4MAhpv+hzBkuyA+ckSFczlf82a9Dal2gKsEw
-sx+eCE2wVPI9uSsWy9z9hb7RgsQeHbB77/GI7iZ66LYuWeZQ9Taq9yeRTcldGfYW
-MJToiQwFQp9yYTDujYoBwitMxhQOXppXqH/tXxdj0vPuzHAQrOimCW3b1PX5Oq0=
-=3NvJ
+iQEcBAABCgAGBQJUmLYPAAoJEJEOHi8Q7zzz3QUIAJzrzcR/7a512OgAThIbixym
+UPUyUIN9yxMSoLAR0F/M3ywGlHCQz3WB5vYHaY5vUz/+HDEBFu3ViNfadNCG1wYg
+TYijBOmZjMj/5Znba1trwCrNIQCtKV8L+uPajRv3bWXUTfpsSeCyJIME6RbBTHCT
+p47JfDzYwNiKTmgUYqr2/+Xg3kcdMaRsPjuvXMvOAKlamRl9QjTMj0qBDvRk+IJL
+Nqz/NOJfd4ZPmYTabsIM/YAHf6qJJxx02ziidnEsKJpIQ6GOqH8ZwUzMfcBLh9ql
+at1JhyU5TrbP6ZWE9YDCT4CCQZ4PbeBF0kvikKhUvZ5pGS7URVpYqt/6mVfAN8w=
+=l4D+
 -----END PGP SIGNATURE-----
 
 ```
@@ -25,7 +25,7 @@ MJToiQwFQp9yYTDujYoBwitMxhQOXppXqH/tXxdj0vPuzHAQrOimCW3b1PX5Oq0=
 size  exec  file                             contents                                                        
             ./                                                                                               
 27            .gitignore                     403de3e1c73edcfaa2f46ff6146f414ddcaeed97717a02af53733b31c2dec963
-113           .travis.yml                    d48aa039d84d35164a8b29ecb75ac4787f974c248a4b09d1cb7587bbc1e15924
+125           .travis.yml                    dc0aebfa2af0cda0911aeb83f023797c055fc2e705f0dadcb9bc6d8493e860ad
 1927          Gruntfile.js                   5d0f065f72236840bf202e58b9d081560a6622f29777d8f0a77f747d4eac5ae1
 1081          LICENSE.md                     0e7bf3c5852cb41c33a213aed24d4321df388f819323e0027c3c91a009429df8
 879           README.md                      1e729581923ba05a5b9357abb4cd7623272f217e6fc9dac29c78eb5305219de6
@@ -33,12 +33,11 @@ size  exec  file                             contents
 106             app.json                     aa191f0bb9f670e023dea8708fd14d5a915a73e3913ef4a4231bfb5bedb4ff9c
 386             jscs.json                    375a3f95f4b5a001c957a21e9550d244a22b27f81ce44e809567eada96fca805
 975             jshint.json                  17f9d9d39a906cd3beba0c1f35b65d46d6efac1c685316ae5069248b2f91e8b1
-798             requirejs.json               9189078c0221987bb50bf6d627902349ef687ffe281ea3aa6ddddbd183f794a7
+918             requirejs.json               fa721ad42e4cd952a56bf3d2c4742d32a1c52440e3687e816f26809800fd7074
               example/                                                                                       
 1026            index.html                   aa9e098ac4bf12d2ee22df69cf519f031137a933bca2077689ae4f4355226f59
-262             trigger_redis_event.js       c8cb74ce9f3a82aaedfc1622fc4f0d10a185a2b64b36d29aaec23ab034d3a863
 389           index.js                       0876663173df2507b528bae0ae3743f98804ae8a81eb8c68707800690182d3f1
-1302          package.json                   58cbe3bc86aff7defa046a71f16aca8b17dfd47ae8aefb3fea0d4e80e9f22f6b
+1331          package.json                   dd8835fa977e26a789b652d75c4d858727794eb67d138c99511ba2fcc5cfa6cf
               src/                                                                                           
 111             README.md                    7b1b44318066880ada5881989046116beac4adcf6953141109992573fd66e684
 321             app.js                       0c64162bf6a662e6b19e803be366961d3fa59fd2ed44202c489f8ff691bc0dfe
@@ -55,7 +54,7 @@ size  exec  file                             contents
 519                   index.test.js          e49c0f4904390ab3fa30f94d9913c4dd37b1898abf8e65f18a04dfa433d55563
                   websocket-server/                                                                          
 47                  README.md                c5eec1264ef9c60f67212bcc0b9e4d114a0c7d4c6e63426f08f87cc18fd7482a
-1586                index.js                 37724c6d4e73cacfb928c5980224b6606d2947174800200d5a193d6c201f9f33
+1586                index.js                 4540bb173373a4b26e3b9bb398e0b500006f290cec503194dbf8819daef79bac
                     tests/                                                                                   
 4558                  index.test.js          b0c5e858706c8949624122f20b886ca60b3565e2fbf7203dbdc2c65352b8c311
 484                 websocket-server.js      37b1e81f04cb5eac2615c9f53f504a0b39eb3d82a82f14fba21820e9ad4a161f
@@ -73,8 +72,14 @@ size  exec  file                             contents
 250                 index.js                 9a3ae0ccf3915a8f8d17c788172fabba521399a2428bf3512d51d0b76a125f6f
                     tests/                                                                                   
 436                   index.test.js          5d15c488e7b50e91d0d47ce96817a98c4617927cc7ee9518226f56b36de1d7fa
+176               check.js                   757a127c09986de9f4e0167019e82dae3ed5306c5cd3ead288bbc432c9817907
 292               config.js                  1d983a5cba047eb268c2e1739a5575784e6d52c586bc2e9b106aff39cc3f16b3
 114               pubsub.js                  29fdf8c30fde9af9ea1707ecabf85ea3f4de3db0768c94a070645105a8a73433
+                  utils/                                                                                     
+0                   README.md                e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+507                 index.js                 fc1e9e1bf67d9c00a3e0b15f76afb4a104a468f215c81dfc62d3d7d3111fb3e4
+                    tests/                                                                                   
+1743                  index.test.js          581358d99595a598a6b81a2dcd1a45ae529285a26781db845a1cbe5f7576dcf5
 ```
 
 #### Ignore
