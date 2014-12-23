@@ -20,6 +20,10 @@ define([ "check" ], function(check) {
             return data_object;
         };
 
+        this.argumentsSplat = function(data_array) {
+            return Array.prototype.slice.call(data_array, 1);
+        };
+
     };
 
     return new Utils();

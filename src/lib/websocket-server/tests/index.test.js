@@ -58,7 +58,7 @@ function(websocket_server_mock, websocket_connection_mock, pubsub_mock, http_moc
             });
         });
 
-        suite("on module creation", function() {
+        suite("on module load", function() {
             setup(function() {
                 env.server_instance = server.instance();
                 env.connection_event_handler = env.server_instance.on.getCall(0).args[1];
@@ -71,7 +71,7 @@ function(websocket_server_mock, websocket_connection_mock, pubsub_mock, http_moc
             });
         });
 
-        suite("on new connection", function() {
+        suite("on connection", function() {
             setup(function() {
                 env.server_instance = server.instance();
                 env.connection_event_handler = env.server_instance.on.getCall(0).args[1];
@@ -86,7 +86,7 @@ function(websocket_server_mock, websocket_connection_mock, pubsub_mock, http_moc
             });
 
             suite("websocket event", function() {
-                test("proxy user event onto internal pubsub", function() {
+                test("proxy connection event onto internal pubsub", function() {
                     env.data_event_handler(env.emitted_data);
                     var pubsub_trigger_args = pubsub_mock.trigger.getCall(0).args;
 
@@ -108,7 +108,8 @@ function(websocket_server_mock, websocket_connection_mock, pubsub_mock, http_moc
 
                     expect(websocket_connection_mock.emit).to.be.calledOnce;
                     expect(websocket_emit_args[0]).to.equal("broadcast");
-                    expect(websocket_emit_args[1]).to.deep.equal(env.event_packet);
+                    expect(websocket_emit_args[1]).to.deep.equal(env.event_packet.name);
+                    expect(websocket_emit_args[2]).to.deep.equal(env.event_packet.payload);
                 });
             });
         });

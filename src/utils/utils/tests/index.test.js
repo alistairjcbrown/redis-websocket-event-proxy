@@ -46,6 +46,25 @@ define([ "utils" ], function(utils) {
                     expect(utils.parseJSON(input)).to.equal(input);
                 });
             });
+
+            suite("when provided Javascript object", function() {
+                test("should return the input", function() {
+                    var input = { foo: "bar" };
+                    expect(utils.parseJSON(input)).to.equal(input);
+                });
+            });
+        });
+
+        suite("argumentsSplat", function() {
+            test("should exist", function() {
+                expect(utils.argumentsSplat).to.be.a("function");
+            });
+
+            test("should return array without first element", function() {
+                var input = [ "foo", "bar", "baz" ],
+                    output = [ "bar", "baz" ];
+                expect(utils.argumentsSplat(input)).to.deep.equal(output);
+            });
         });
     });
 });

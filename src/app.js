@@ -10,8 +10,7 @@ function(redis_client, websocket_server) {
     var app = {};
 
     app.init = function() {
-        // redis_client;
-
+        redis_client.start();
         websocket_server.start();
 
         return true;
