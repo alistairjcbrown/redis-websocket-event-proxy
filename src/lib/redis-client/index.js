@@ -23,7 +23,11 @@ define([
     };
 
     proxyEventToServer = function(event_packet) {
-        redis_pubsub.emitter.publish(event_packet.name, event_packet.payload);
+        var event_name = event_packet.name,
+            message = JSON.stringify(event_packet.payload);
+
+        utils.cache.set(event_name + message, true);
+        redis_pubsub.emitter.publish(event_name, message);
     };
 
     createRedisClient = function() {
@@ -37,7 +41,9 @@ define([
     setupListener = function(listener) {
         listener.psubscribe("*");
         listener.on("pmessage", function (pattern, event_name, message) {
-            proxyEventToClients(event_name, message);
+            if ( ! utils.cache.has(event_name + message)) {
+                proxyEventToClients(event_name, message);
+            }
         });
 
         return listener;

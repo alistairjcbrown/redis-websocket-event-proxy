@@ -41,17 +41,27 @@
                 inbox = document.getElementById("inbox"),
                 outbox = document.getElementById("outbox"),
                 message_input = document.querySelector(".show-messages.outgoing input"),
-                message_form = document.querySelector(".show-messages.outgoing form");
+                message_form = document.querySelector(".show-messages.outgoing form"),
+                output_event = function(event_name, payload) {
+                    return "Event: '" + event_name + "', Payload: '" + JSON.stringify(payload) + "'\n\n"
+                };
 
             primus.on("broadcast", function received(event_name, payload) {
-                inbox.value += "Event: '" + event_name + "', Payload: '" + payload + "'\n\n";
+                inbox.value += output_event(event_name, payload);
             });
 
             message_form.onsubmit = function submit(ev) {
                 ev.preventDefault();
 
-                outbox.value += "Event: 'client-action', Payload: '" + message_input.value + "'\n\n";
-                primus.emit("client-action", message_input.value);
+                var value = message_input.value;
+                if (value.split(",").length > 0) {
+                    value = value.split(",");
+                } else {
+                    value = [value];
+                }
+
+                outbox.value += output_event("client-action", value)
+                primus.emit.apply(primus, ["client-action"].concat(value));
                 message_input.value = '';
 
                 return false;

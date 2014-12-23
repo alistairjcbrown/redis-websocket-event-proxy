@@ -26,6 +26,7 @@ define([
                 name: "server-action",
                 payload: [ "foo", "bar" ]
             };
+            env.stringified_payload = JSON.stringify(env.event_packet.payload);
         });
 
         test("should exist", function() {
@@ -63,7 +64,7 @@ define([
 
             suite("redis event", function() {
                 test("should proxy onto internal pubsub", function() {
-                    env.data_event_handler("*", env.event_packet.name, env.event_packet.payload);
+                    env.data_event_handler("*", env.event_packet.name, env.stringified_payload);
                     var pubsub_trigger_args = pubsub_mock.trigger.getCall(0).args;
 
                     expect(pubsub_mock.trigger).to.be.calledOnce;
@@ -73,13 +74,28 @@ define([
             });
 
             suite("internal pubsub event", function() {
+                setup(function() {
+                    pubsub_mock.on("to-clients", env.spy);
+                });
+
+                teardown(function() {
+                    pubsub_mock.off("to-clients");
+                });
+
                 test("should proxy onto redis event", function() {
                     pubsub_mock.trigger("to-server", env.event_packet);
                     var emitter_publish_args = env.clients.emitter.publish.getCall(0).args;
 
                     expect(env.clients.emitter.publish).to.be.calledOnce;
                     expect(emitter_publish_args[0]).to.deep.equal(env.event_packet.name);
-                    expect(emitter_publish_args[1]).to.deep.equal(env.event_packet.payload);
+                    expect(emitter_publish_args[1]).to.deep.equal(env.stringified_payload);
+                });
+
+                test("should ignore reflected events", function() {
+                    pubsub_mock.trigger("to-server", env.event_packet);
+                    env.data_event_handler("*", env.event_packet.name, env.stringified_payload);
+
+                    expect(env.spy).to.not.be.called;
                 });
             });
         });

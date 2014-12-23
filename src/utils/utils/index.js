@@ -3,7 +3,7 @@
  *
  *  A collection of useful functions
  */
-define([ "check" ], function(check) {
+define([ "check", "expirable" ], function(check, Expirable) {
     "use strict";
 
     var Utils = function() {
@@ -23,6 +23,13 @@ define([ "check" ], function(check) {
         this.argumentsSplat = function(data_array) {
             return Array.prototype.slice.call(data_array, 1);
         };
+
+        this.cache = (function() {
+            return new Expirable({
+                expire: "500 ms",
+                interval: "10 seconds"
+            });
+        }());
 
     };
 
