@@ -8,6 +8,14 @@
         <title>Example Page</title>
         <script src="http://localhost:8080/primus/primus.js"></script>
         <style>
+            .show-messages {
+                width: 49%;
+                float: left;
+            }
+            input {
+                width: 98%;
+                font-size: 14px
+            }
             textarea {
                 width: 100%;
                 height: 200px;
@@ -15,18 +23,40 @@
         </style>
     </head>
     <body>
-        <textarea id="output" readonly></textarea>
+        <div class="show-messages outgoing">
+            <strong>Messages sent to the server</strong>
+            <textarea id="outbox" readonly></textarea>
+            <form>
+                <input type="text" placeholder="Type text and hit return to send to server" />
+            </form>
+        </div>
+
+        <div class="show-messages incoming">
+            <strong>Messages received from the server</strong>
+            <textarea id="inbox" readonly></textarea>
+        </div>
+
         <script>
-            var output = document.getElementById("output"),
-                echo = document.getElementById("echo");
+            var primus = new Primus("http://localhost:8080"),
+                inbox = document.getElementById("inbox"),
+                outbox = document.getElementById("outbox"),
+                message_input = document.querySelector(".show-messages.outgoing input"),
+                message_form = document.querySelector(".show-messages.outgoing form");
 
-            var primus = new Primus("http://localhost:8080");
-
-            primus.on("notification", function received(data) {
-                output.value += data +"\n";
+            primus.on("broadcast", function received(event_name, payload) {
+                inbox.value += "Event: '" + event_name + "', Payload: '" + payload + "'\n\n";
             });
 
-            primus.emit("client-action", "bar");
+            message_form.onsubmit = function submit(ev) {
+                ev.preventDefault();
+
+                outbox.value += "Event: 'client-action', Payload: '" + message_input.value + "'\n\n";
+                primus.emit("client-action", message_input.value);
+                message_input.value = '';
+
+                return false;
+            };
+
         </script>
     </body>
 </html>

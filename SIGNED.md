@@ -4,13 +4,13 @@
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQEcBAABCgAGBQJUmMomAAoJEJEOHi8Q7zzzN8YH/1uddXPF3IhFxBkHWLBLCh8u
-xF8x2p/LMFGWw25J/DPvtdRKwJXoJZkbcLLJf10+H8NvZ4UDyugk1xRiEd2UkWZJ
-SzqGHeyRCq4cAgCOv24MbqV6+akI/E/TgPTwC4KyOkq9H18fFL5PGP27lyDR986d
-pLPoRcE2wglAQfEGGIszVbEymngW7DKgUyihoTJtR8O6ZriKLTZNpZFZ+pdSqvYR
-XqEf94Ll/USc7ccSE6oNfbsPMUNV9+0CpdZq+eqnwdcLdDdlGyB3yfLIhgkMeKmK
-QdF7S97eJOTFyyROuZRJpKMKRvUF9B6jP8sBZP2h91i+Vavxyk7QxjqLobodC9o=
-=MAeo
+iQEcBAABCgAGBQJUmNFdAAoJEJEOHi8Q7zzzvbAIAIYRKGg8e5+Byf7iPOcZWuX/
+3NYbodj5cAYRVmc77i0ny9c/vHQLAtNfUMTxEZQurFdf+aGKLqZ7YVmtf2MTeO5y
+jazFs0D1GAXBToPBqXc76Mfx6qQGR3XtYfw6ZSKOuRJxT5NPPhey5W2T3INU2q/+
++pHwZ3iUSbnYMZB7eO5DIXWKLA2xvzfQwbENcYZXe0AYwnCIp/XQgEyxfpgxANho
+J/XE6SabQakznof1OB9k/U1LApT45u+8XfEkQyxXWsNEhfFB1Gs53hu9JCYSBlpv
+JBwFxojF7Wi5B1A01MUJKq4+maReWFHAsWDZ5mVGT4g3WxTe4SHKResf/6sZS8Q=
+=YheI
 -----END PGP SIGNATURE-----
 
 ```
@@ -35,7 +35,9 @@ size  exec  file                             contents
 975             jshint.json                  17f9d9d39a906cd3beba0c1f35b65d46d6efac1c685316ae5069248b2f91e8b1
 918             requirejs.json               fa721ad42e4cd952a56bf3d2c4742d32a1c52440e3687e816f26809800fd7074
               example/                                                                                       
-1026            index.html                   aa9e098ac4bf12d2ee22df69cf519f031137a933bca2077689ae4f4355226f59
+2198            index.html                   15188dafa7b55bdc934f21c257b03dbbbd2e8b1246d0578afbee861fae32d2bc
+279             listen_for_redis_events.js   0e6bed686e743b3064716f3fdde546787456a47f479b96de7f30979ea97dc0a6
+341             trigger_redis_event.js       24362e6cbedc3abe93b0bd18af54080ae8bdc227d0c909c281d9ee7e9224bdaa
 389           index.js                       0876663173df2507b528bae0ae3743f98804ae8a81eb8c68707800690182d3f1
 1331          package.json                   dd8835fa977e26a789b652d75c4d858727794eb67d138c99511ba2fcc5cfa6cf
               src/                                                                                           
