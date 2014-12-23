@@ -2,10 +2,10 @@
  *  Websocket Server
  */
 define([
-    "primus", "primus-emit", "primus-rooms",
-    "authorize",
-],
-function(Primus, primus_emit, primus_rooms, authorize) {
+    "primus", "primus-emit", "primus-rooms", "authorize"
+], function(
+    Primus, primus_emit, primus_rooms, authorize
+) {
     "use strict";
 
     var setupPrimus = function(server, config) {

@@ -5,7 +5,6 @@ define([ "authorize" ], function(authorize) {
     "use strict";
 
     suite("Authorization Module", function() {
-
         test("should exist", function() {
             expect(authorize).to.be.a("function");
         });
@@ -14,6 +13,5 @@ define([ "authorize" ], function(authorize) {
             authorize({}, env.spy);
             expect(env.spy).to.have.been.calledOnce;
         });
-
     });
 });

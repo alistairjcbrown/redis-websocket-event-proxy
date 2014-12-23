@@ -1,8 +1,11 @@
 /**
  *  Redis client Tests
  */
-define([ "mocks/redis", "mocks/pubsub" ],
-function(redis_mock, pubsub_mock) {
+define([
+    "mocks/redis", "mocks/pubsub"
+], function(
+    redis_mock, pubsub_mock
+) {
     "use strict";
 
     suite("Redis clients", function() {
@@ -59,7 +62,7 @@ function(redis_mock, pubsub_mock) {
             });
 
             suite("redis event", function() {
-                test("proxy server event onto internal pubsub", function() {
+                test("should proxy onto internal pubsub", function() {
                     env.data_event_handler("*", env.event_packet.name, env.event_packet.payload);
                     var pubsub_trigger_args = pubsub_mock.trigger.getCall(0).args;
 
@@ -70,7 +73,7 @@ function(redis_mock, pubsub_mock) {
             });
 
             suite("internal pubsub event", function() {
-                test("proxy onto redis event", function() {
+                test("should proxy onto redis event", function() {
                     pubsub_mock.trigger("to-server", env.event_packet);
                     var emitter_publish_args = env.clients.emitter.publish.getCall(0).args;
 

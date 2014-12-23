@@ -3,8 +3,7 @@
  */
 define([
     "squire", "chai", "sinon", "sinon-chai"
-],
-function(
+], function(
     Squire, chai, sinon, sinon_chai
 ) {
     "use strict";

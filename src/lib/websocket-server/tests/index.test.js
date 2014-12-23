@@ -1,8 +1,13 @@
 /**
  *  Websocket Server Tests
  */
-define([ "mocks/websocket-server", "mocks/websocket-connection", "mocks/pubsub", "mocks/http" ],
-function(websocket_server_mock, websocket_connection_mock, pubsub_mock, http_mock) {
+define([
+    "mocks/websocket-server", "mocks/websocket-connection",
+    "mocks/pubsub", "mocks/http"
+], function(
+    websocket_server_mock, websocket_connection_mock,
+    pubsub_mock, http_mock
+) {
     "use strict";
 
     suite("Websocket Server", function() {
@@ -64,7 +69,7 @@ function(websocket_server_mock, websocket_connection_mock, pubsub_mock, http_moc
                 env.connection_event_handler = env.server_instance.on.getCall(0).args[1];
             });
 
-            test("listen for new connection", function() {
+            test("should listen for new connection", function() {
                 expect(env.server_instance.on).to.be.calledOnce;
                 expect(env.server_instance.on.getCall(0).args[0]).to.equal("connection");
                 expect(env.connection_event_handler).to.be.a("function");
@@ -79,14 +84,14 @@ function(websocket_server_mock, websocket_connection_mock, pubsub_mock, http_moc
                 env.data_event_handler = websocket_connection_mock.on.getCall(0).args[1];
             });
 
-            test("listen for incoming data", function() {
+            test("should listen for incoming data", function() {
                 expect(websocket_connection_mock.on).to.be.calledOnce;
                 expect(websocket_connection_mock.on.getCall(0).args[0]).to.equal("incoming::data");
                 expect(env.data_event_handler).to.be.a("function");
             });
 
             suite("websocket event", function() {
-                test("proxy connection event onto internal pubsub", function() {
+                test("should proxy onto internal pubsub", function() {
                     env.data_event_handler(env.emitted_data);
                     var pubsub_trigger_args = pubsub_mock.trigger.getCall(0).args;
 
@@ -95,14 +100,14 @@ function(websocket_server_mock, websocket_connection_mock, pubsub_mock, http_moc
                     expect(pubsub_trigger_args[1]).to.deep.equal(env.event_packet);
                 });
 
-                test("ignore system event", function() {
+                test("should ignore system event", function() {
                     env.data_event_handler("ping::1234567890");
                     expect(pubsub_mock.trigger).to.not.be.called;
                 });
             });
 
             suite("internal pubsub event", function() {
-                test("proxy onto websocket event", function() {
+                test("should proxy onto websocket event", function() {
                     pubsub_mock.trigger("to-clients", env.event_packet);
                     var websocket_emit_args = websocket_connection_mock.emit.getCall(0).args;
 

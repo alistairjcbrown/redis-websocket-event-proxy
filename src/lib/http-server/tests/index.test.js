@@ -1,8 +1,7 @@
 /**
  *  HTTP Server Tests
  */
-define([ "mocks/http" ],
-function(http_mock) {
+define([ "mocks/http" ], function(http_mock) {
     "use strict";
 
     suite("HTTP Server", function() {
@@ -21,7 +20,6 @@ function(http_mock) {
         });
 
         suite("get server instance", function() {
-
             test("should exist", function() {
                 expect(server.instance).to.be.a("function");
             });
@@ -30,7 +28,6 @@ function(http_mock) {
                 var created_server = server.instance();
                 expect(created_server).to.be.an.instanceOf(http_mock._Server_mock);
             });
-
         });
 
         suite("start server", function() {
@@ -48,7 +45,6 @@ function(http_mock) {
                 expect(env.created_server.listen).to.have.been.calledOnce;
                 expect(env.created_server.listen).to.have.been.calledWith(8080);
             });
-
         });
 
     });
